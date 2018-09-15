@@ -104,7 +104,6 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Technologist with a wide reange of skills of both software and hardware."
   location         : "Dover NH"
-  email            : "chris@ourea.solutions"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -241,10 +240,21 @@ tag_archive:
 
 # HTML Compression
 # - http://jch.penibelst.de/
-compress_html:
+s_html:
   clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
   ignore:
+    envs: [local]
     envs: development
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+#compress_html:
+#  clippings: all
+#  ignore:
+#    envs: development
 
 
 # Defaults
