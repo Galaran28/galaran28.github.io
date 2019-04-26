@@ -1,37 +1,43 @@
 ---
-layout: default
-title: Home
+title: Ourea Solutions
+layout: splash
+header:
+  overlay_color: "#000"
+  overlay_filter: '0.6'
+  overlay_image: "/assets/header.jpeg"
+  layout: splash
+  actions:
+  - label: Contact Us
+    url: mailto:chris@ourea.solutions
+excerpt: We believe that technology can be used to make the world a better place.
+  Let's make yours a little better today
+feature_row:
+- image_path: assets/sec.jpeg
+  alt: 4 keys in a row, on a board, with tags attached
+  title: Security Review
+  excerpt: Security is a moving target. We can look at your use of technology and
+    suggest solutions that limt your risk and protect what matters most
+- image_path: "/assets/backup.jpeg"
+  alt: Tape drive with top side removed
+  title: Backup Service
+  excerpt: How are your backups? We provide secure offsite backups for highly competative
+    prices.
+- image_path: "/assets/dev.jpeg"
+  alt: Minified code on a laptop screen
+  title: Web Development
+  excerpt: Like what you see? We can provide blazingly fast static pages hosted on
+    Github Pages. Just like our own.
+further-info:
+- title: Custom Solutions
+  alt: Question Mark
+  image_path: "/assets/more.jpeg"
+  excerpt: Above are just our most common solutions. From 3D printed parts to custom
+    software solutions, get in touch and see if our skills fit your needs
+  url: mailto:chris@ourea.solutions
+  btn_label: Contact Us
+  btn_class: btn--primary
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+{% include feature_row %}
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+{% include feature_row id="further-info" type="left" %}
